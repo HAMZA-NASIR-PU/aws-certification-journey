@@ -74,3 +74,70 @@ Your small business runs an online store:
 ## Summary
 
 By using a VPC, you can control the entire networking environment of your AWS resources, ensuring security, scalability, and reliability, much like managing an office building with various rooms and security measures. This setup helps you to create a robust and secure infrastructure for your applications.
+
+
+## <img src="https://user-images.githubusercontent.com/74038190/212257467-871d32b7-e401-42e8-a166-fcfd7baa4c6b.gif" width ="25" style="margin-bottom: -5px;"> Is Internet Gateway associated with Subnet or VPC in AWS ?
+
+### Overview
+
+In Amazon Web Services (AWS), an Internet Gateway is a horizontally scaled, redundant, and highly available VPC component that allows communication between instances in your VPC and the internet. This README provides an overview of how an Internet Gateway is associated within AWS infrastructure.
+
+### Association of Internet Gateway
+
+An Internet Gateway is **associated with a VPC (Virtual Private Cloud)**, not with a specific subnet. This association allows instances within the VPC to communicate with the internet.
+
+#### Key Points:
+
+- **VPC Association**: The Internet Gateway is attached to a VPC, providing the VPC with a route to the internet.
+- **Subnet Configuration**: To enable instances within a subnet to access the internet, additional configurations are required at the subnet level.
+
+### Configuring Internet Access for Subnets
+
+While the Internet Gateway is associated with the VPC, subnets within the VPC require specific configurations to enable internet access:
+
+1. **Route Table Configuration**:
+   - The subnet's route table must have a route that directs internet-bound traffic (0.0.0.0/0) to the Internet Gateway.
+
+2. **Public IP Addresses**:
+   - Instances must have public IP addresses or Elastic IP addresses to be reachable from the internet.
+
+3. **Network ACLs and Security Groups**:
+   - Appropriate Network ACLs and Security Group rules must be configured to allow the necessary inbound and outbound traffic.
+
+### Example Configuration
+
+#### Step-by-Step:
+
+1. **Attach Internet Gateway to VPC**:
+   - In the AWS Management Console, navigate to the VPC dashboard.
+   - Select "Internet Gateways" and create a new Internet Gateway.
+   - Attach the Internet Gateway to your VPC.
+
+2. **Configure Route Table**:
+   - Navigate to the "Route Tables" section.
+   - Select the route table associated with the subnet.
+   - Edit the route table and add a new route:
+     - **Destination**: 0.0.0.0/0
+     - **Target**: [Internet Gateway ID]
+
+3. **Assign Public IP to Instances**:
+   - Ensure that instances in the subnet have public IP addresses assigned. This can be done at launch time or by associating an Elastic IP.
+
+4. **Update Security Groups**:
+   - Modify the security group associated with your instances to allow inbound traffic (e.g., HTTP, HTTPS, SSH).
+
+### Important Considerations
+
+- **Private Subnets**:
+  - Instances in private subnets do not have direct internet access, even if the route table points to the Internet Gateway. To provide internet access, use a NAT Gateway or NAT instance in a public subnet.
+
+- **Cost Management**:
+  - Be mindful of Elastic IP address costs. AWS charges for unused Elastic IP addresses and for any Elastic IP addresses associated with stopped instances.
+
+By following these guidelines, you can effectively manage internet access for your instances within a VPC using an Internet Gateway.
+
+### Conclusion
+
+An Internet Gateway is associated with a VPC, enabling internet communication for instances. Subnets within the VPC require specific configurations in their route tables and instances must have public IP addresses for internet access.
+
+For more information, refer to the [AWS Documentation](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html).
