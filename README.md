@@ -1,4 +1,4 @@
-# aws-certification-journey
+# My AWS Certification Journey
 
 This README.md and the repository contain all the information addressing the doubts I am facing in my AWS Certification journey.
 
