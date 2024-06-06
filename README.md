@@ -1,15 +1,11 @@
 # aws-certification-journey
 
-
-# AWS Virtual Private Cloud (VPC) Overview
-
-
-## What is a VPC?
+## <img src="https://user-images.githubusercontent.com/74038190/212257467-871d32b7-e401-42e8-a166-fcfd7baa4c6b.gif" width ="25" style="margin-bottom: -5px;"> What is a VPC?
 
 A Virtual Private Cloud (VPC) is a virtual network dedicated to your AWS account. It is logically isolated from other virtual networks in the AWS cloud, allowing you to launch AWS resources, such as EC2 instances, in a defined virtual network.
 
 
-## Real-Life Analogy
+### Real-Life Analogy
 
 Think of a VPC as a private office building:
 
@@ -19,15 +15,15 @@ Think of a VPC as a private office building:
 - **Hallways (Route Tables):** These define how you move between rooms. Route tables determine how traffic is directed within the VPC.
 
 
-## Setting Up a VPC: Real-Life Example
+### Setting Up a VPC: Real-Life Example
 
 Imagine you are setting up a web application for a small business:
 
-### 1. Creating a VPC
+#### 1. Creating a VPC
 
 You create a VPC with a specific IP address range, say `10.0.0.0/16`. This is like acquiring an office building with a certain number of rooms.
 
-### 2. Dividing the VPC into Subnets
+#### 2. Dividing the VPC into Subnets
 
 You divide your VPC into subnets. For instance:
 
@@ -36,7 +32,7 @@ You divide your VPC into subnets. For instance:
 
 The public subnet is where your web servers will be accessible to the internet, like the reception area of your office. The private subnet is where your database servers will be, away from public access, like the employee-only areas.
 
-### 3. Setting Up Security
+#### 3. Setting Up Security
 
 - **Security Groups:**
   - You create security groups to control traffic to your web servers and databases. For example, you might allow HTTP and HTTPS traffic to your web servers but restrict the database server to only accept traffic from the web servers.
@@ -46,19 +42,19 @@ The public subnet is where your web servers will be accessible to the internet, 
 
 For more detailed information, visit the [AWS VPC User Guide](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html).
 
-### 4. Route Tables
+#### 4. Route Tables
 
 You create route tables to manage traffic routing within your VPC. For instance, you might have:
 
 - A route table for the public subnet that routes internet traffic through an internet gateway.
 - A route table for the private subnet that does not allow direct internet access, but allows internal traffic.
 
-### 5. Internet Gateway
+#### 5. Internet Gateway
 
 To allow your public subnet to communicate with the internet, you attach an internet gateway to your VPC. This is like having a main entrance/exit door in your office building.
 
 
-## Example Scenario
+### Example Scenario
 
 Your small business runs an online store:
 
@@ -78,6 +74,3 @@ Your small business runs an online store:
 ## Summary
 
 By using a VPC, you can control the entire networking environment of your AWS resources, ensuring security, scalability, and reliability, much like managing an office building with various rooms and security measures. This setup helps you to create a robust and secure infrastructure for your applications.
-
-<div style="border-top: 2px solid red;"></div>
-
