@@ -73,7 +73,7 @@ Your small business runs an online store:
   - **NAT Gateway (optional):** If your database servers need to access the internet for updates, you might use a NAT gateway.
 
 
-## Summary
+### Summary
 
 By using a VPC, you can control the entire networking environment of your AWS resources, ensuring security, scalability, and reliability, much like managing an office building with various rooms and security measures. This setup helps you to create a robust and secure infrastructure for your applications.
 
