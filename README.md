@@ -1,5 +1,7 @@
 # aws-certification-journey
 
+This README.md and the repository contain all the information addressing the doubts I am facing in my AWS Certification journey.
+
 ## <img src="https://user-images.githubusercontent.com/74038190/212257467-871d32b7-e401-42e8-a166-fcfd7baa4c6b.gif" width ="25" style="margin-bottom: -5px;"> What is a VPC?
 
 A Virtual Private Cloud (VPC) is a virtual network dedicated to your AWS account. It is logically isolated from other virtual networks in the AWS cloud, allowing you to launch AWS resources, such as EC2 instances, in a defined virtual network.
