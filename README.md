@@ -149,3 +149,10 @@ For more information, refer to the [AWS Documentation](https://docs.aws.amazon.c
 ### Answer
 
 A route table contains a set of rules, called routes, that are used to determine where network traffic from your subnet or gateway is directed. When a network packet arrives at a Router, it determines the destination IP address of a received packet and makes the routing decisions to send packet to their destination.
+
+
+## <img src="https://user-images.githubusercontent.com/74038190/212257467-871d32b7-e401-42e8-a166-fcfd7baa4c6b.gif" width ="25" style="margin-bottom: -5px;"> What do you mean by redundancy in AWS ?
+
+### Answer
+
+In Amazon Web Services (AWS), redundancy is a strategy that involves duplicating hardware or software components to prevent single points of failure and increase a system's reliability and availability. This can help prevent data loss and downtime in the event of a failure. 
