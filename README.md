@@ -143,3 +143,9 @@ By following these guidelines, you can effectively manage internet access for yo
 An Internet Gateway is associated with a VPC, enabling internet communication for instances. Subnets within the VPC require specific configurations in their route tables and instances must have public IP addresses for internet access.
 
 For more information, refer to the [AWS Documentation](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html).
+
+## <img src="https://user-images.githubusercontent.com/74038190/212257467-871d32b7-e401-42e8-a166-fcfd7baa4c6b.gif" width ="25" style="margin-bottom: -5px;"> Can you explain the use of Route Table ?
+
+### Answer
+
+A route table contains a set of rules, called routes, that are used to determine where network traffic from your subnet or gateway is directed. When a network packet arrives at a Router, it determines the destination IP address of a received packet and makes the routing decisions to send packet to their destination.
