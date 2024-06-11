@@ -156,3 +156,15 @@ A route table contains a set of rules, called routes, that are used to determine
 ### Answer
 
 In Amazon Web Services (AWS), redundancy is a strategy that involves duplicating hardware or software components to prevent single points of failure and increase a system's reliability and availability. This can help prevent data loss and downtime in the event of a failure. 
+
+## <img src="https://user-images.githubusercontent.com/74038190/212257467-871d32b7-e401-42e8-a166-fcfd7baa4c6b.gif" width ="25" style="margin-bottom: -5px;"> Elastic IP on NAT Gateway, but not on Internet Gateway ?
+
+### Answer
+
+4
+
+A NAT Gateway still uses an Internet Gateway to access the Internet. So they are not two exclusive, separate things like you indicate in your question. Also, an Internet Gateway is not just for allowing inbound connections from the Internet, as you state in your question, it is for allowing any Internet access inbound to your VPC or outbound from your VPC.
+
+An Internet Gateway allows anything in the VPC with a public IP address to access the Internet. It's basically a bridge between your private network, and Amazon's Internet connection.
+
+A NAT Gateway is one of those resources that gets a public IP address in order to access the Internet through the Internet Gateway. The NAT Gateway just serves as a route to the Internet for all the resources in the VPC that do not have a public IP address.
