@@ -161,8 +161,6 @@ In Amazon Web Services (AWS), redundancy is a strategy that involves duplicating
 
 ### Answer
 
-4
-
 A NAT Gateway still uses an Internet Gateway to access the Internet. So they are not two exclusive, separate things like you indicate in your question. Also, an Internet Gateway is not just for allowing inbound connections from the Internet, as you state in your question, it is for allowing any Internet access inbound to your VPC or outbound from your VPC.
 
 An Internet Gateway allows anything in the VPC with a public IP address to access the Internet. It's basically a bridge between your private network, and Amazon's Internet connection.
